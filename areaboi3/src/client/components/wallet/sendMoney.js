@@ -3,7 +3,6 @@ import loadProfiles from '../../settings/loadProfiles';
 // import { sendCelo } from "../../settings/celo";
 import temp from '../../settings/celo';
 import {
-  sendToken,
   verifyToken,
   saveTransaction,
   generateOTP
@@ -13,7 +12,7 @@ import {
   getBankList,
   transactionRecipient
 } from '../../settings/kuda';
-import { checkTransferStatus, getMaticBalance } from '../../settings/circle';
+import { checkTransferStatus } from '../../settings/circle';
 
 const { sendCelo } = temp();
 export function SendMoneyKuda({ reset, selected, userDet, saleInfo }) {

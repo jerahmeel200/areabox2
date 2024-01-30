@@ -1,5 +1,5 @@
 import { useEffect, useRef, useState } from 'react';
-import { sendToken, verifyToken } from '../../settings/services';
+import { verifyToken } from '../../settings/services';
 
 export function PhoneConfirm(props) {
   const { userDet } = props;
