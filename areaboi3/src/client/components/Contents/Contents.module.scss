@@ -1,0 +1,136 @@
+.container {
+  border: 1px solid gray;
+  margin: 50px;
+}
+
+.content {
+  margin: 5px;
+  display: flex;
+}
+.filter {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+}
+
+.details {
+  flex: 5;
+
+  .box {
+    background: white;
+    display: flex;
+    border: 1px solid grey;
+    margin: 5px;
+  }
+}
+
+.btn {
+  width: 200px;
+  margin-top: 2px;
+}
+
+.card {
+  position: relative;
+  margin: 0.5rem 0 1rem 0;
+  background-color: #fff;
+  height: 300px;
+  -webkit-transition: -webkit-box-shadow 0.25s;
+  transition: -webkit-box-shadow 0.25s;
+  transition: box-shadow 0.25s;
+  transition:
+    box-shadow 0.25s,
+    -webkit-box-shadow 0.25s;
+  border-radius: 4px;
+  box-shadow: 0 8px 6px -6px black;
+}
+.card_image {
+  position: relative;
+}
+
+.card_image .img {
+  display: block;
+  border-radius: 2px 2px 0 0;
+  position: relative;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  width: 100%;
+}
+
+.img {
+  border-style: none;
+}
+
+.card_content {
+  padding: 24px;
+  border-radius: 0 0 2px 2px;
+}
+.card_description {
+  margin: 0;
+}
+
+.card_title {
+  display: block;
+  line-height: 32px;
+  margin-bottom: 8px;
+  font-size: 20px;
+  font-weight: 300;
+}
+
+.btn_floating.btn_large.halfway_fab {
+  bottom: -28px;
+}
+
+.btn_floating.halfway_fab {
+  position: absolute;
+  right: 24px;
+  bottom: -20px;
+}
+
+.btn_floating.btn_large {
+  width: 45px;
+  height: 45px;
+  padding: 0;
+}
+
+.btn_floating {
+  display: inline-block;
+  color: #fff;
+  position: relative;
+  overflow: hidden;
+  z-index: 1;
+  width: 40px;
+  height: 40px;
+  line-height: 40px;
+  padding: 0;
+  background-color: #26a69a;
+  border-radius: 50%;
+  -webkit-transition: background-color 0.3s;
+  transition: background-color 0.3s;
+  cursor: pointer;
+  vertical-align: middle;
+}
+
+.red {
+  background-color: #f44336 !important;
+}
+
+.btn_floating.btn_large {
+  line-height: 45px;
+}
+
+.btn_floating {
+  width: inherit;
+  display: inline-block;
+  text-align: center;
+  color: #fff;
+  font-size: 1.8rem;
+  line-height: 45px;
+}
+
+.pagination {
+  margin-left: 40%;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}

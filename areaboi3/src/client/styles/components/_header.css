@@ -1,0 +1,150 @@
+header {
+  width: 360px;
+  position: sticky;
+  top: 0px;
+  height: 90px;
+  transition: top 0.3s;
+}
+
+footer {
+  position: fixed;
+  left: 0px;
+  bottom: 0px;
+  background: #e8e5e5;
+  width: 360px;
+}
+.areabox-mascot {
+  height: 40px;
+  width: 40px;
+  position: relative;
+  left: 5px;
+}
+.mascot-div {
+  display: flex;
+  flex-direction: column;
+}
+.mascot {
+  font-family: Stolzl;
+  position: relative;
+  font-size: 10px;
+}
+.view_channels {
+  height: 14px;
+  width: 14px;
+}
+.unreadBolt img {
+  height: 35px;
+  width: 35px;
+  position: relative;
+  left: 4px;
+}
+.black-footer {
+  background: black;
+  display: flex;
+  justify-content: space-around;
+  height: 30px;
+  align-items: center;
+  font-family: 'RobotoMonoBold';
+  font-weight: 700;
+  position: fixed;
+  bottom: 0px;
+  width: 360px;
+}
+footer {
+}
+.black-footer img {
+  width: 24px;
+  height: 24px;
+}
+.signout-footer {
+  position: relative;
+  right: 4px;
+  bottom: 3px;
+}
+.footer-item {
+  background: white;
+  height: 15px;
+  font-size: 11px;
+  padding: 2px;
+  text-align: center;
+  white-space: nowrap;
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  font-weight: 700;
+}
+.app-container {
+  background: rgba(142, 109, 185, 0.1);
+}
+.unreadNotif {
+  position: relative;
+  left: 10px;
+}
+.tab {
+  width: 72px;
+  height: 30px;
+}
+.rooms_btn {
+  width: 260px;
+  font-size: 16px;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+*:before,
+*:after {
+  box-sizing: inherit;
+}
+
+html,
+body {
+  height: 100%;
+  font: 100%/1.5em 'Open Sans';
+  /*"Varela Round", sans-serif;*/
+  margin: 0px;
+  scroll-behaviour: smooth;
+}
+
+a {
+  text-decoration: none;
+  cursor: pointer;
+  word-wrap: break-word;
+  /*font-size:80%;*/
+  color: white; /*#ddd */
+}
+
+a .no_link {
+  font-size: 100% !important;
+}
+
+/* FIXED-NAV-BAR */
+.fixed-nav-bar {
+  z-index: 9999;
+  width: 1024px;
+  height: 87px;
+  border-bottom: 1px solid #777;
+  font:
+    20px 'ScriberStencil',
+    sans-serif; /* 120%/1.5em */
+  margin: 0px auto;
+  width: 100% !important;
+}
+
+ol,
+ul {
+  list-style: none outside none;
+  padding: 0;
+  margin: 0;
+}
+
+.app-container {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+}
+
+.app-container > * {
+  flex: 1 1 auto;
+}

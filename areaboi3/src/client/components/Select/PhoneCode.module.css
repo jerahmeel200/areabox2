@@ -1,0 +1,57 @@
+.container {
+  width: 300px;
+  max-height: 15rem;
+  z-index: 10;
+  background-color: #ffffff;
+  overflow: hidden;
+}
+
+.items {
+  text-align: left;
+  width: 100%;
+  height: 100%;
+  max-height: inherit;
+  border: 1px solid black;
+  overflow-y: scroll;
+  position: relative;
+}
+
+.items > div:first-of-type {
+  position: sticky;
+  top: 0;
+}
+
+.items:hover {
+  cursor: pointer;
+}
+
+.phone_code {
+  display: flex;
+  padding: 0.5rem 1rem;
+  border-bottom: 0.5px dotted rgba(0, 0, 0, 0.5);
+}
+.phone_code:hover {
+  background-color: rgba(142, 109, 185, 0.1);
+}
+
+.phoneCode {
+  padding: 0.6rem 0 0.5rem 1rem;
+  background-color: white;
+  border: 1px solid black;
+  border-right: none;
+  outline: none;
+  display: flex;
+  flex-direction: column;
+  font-size: 0.5rem;
+}
+
+.phoneCode:hover {
+  cursor: pointer;
+}
+
+.phoneCodeSearch {
+  width: 100%;
+  outline: none;
+  border: 1px solid black;
+  padding: 0.5rem;
+}

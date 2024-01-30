@@ -1,0 +1,99 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>AreaBoi Post web app</title>
+
+    <script src="//code.jquery.com/jquery-3.1.1.min.js"></script>
+
+    <script src="lib/polyfills/promise.min.js"></script>
+
+    <!--script src="//cdnjs.cloudflare.com/ajax/libs/babel-core/6.1.19/browser.min.js"></script>
+	<script src="//www.gstatic.com/firebasejs/3.6.10/firebase-app.js"></script>
+  <script src="//www.gstatic.com/firebasejs/3.6.10/firebase-auth.js"></script>
+  <script src="//www.gstatic.com/firebasejs/3.6.10/firebase-database.js"></script>
+  <script src="firebase.js"></script-->
+
+    <script src="https://www.gstatic.com/firebasejs/5.7.1/firebase.js"></script>
+
+    <script src="libv1/chatLib.js?v1.25"></script>
+
+    <script src="post.js?v1.21"></script>
+
+    <link rel="stylesheet" href="post.css" />
+
+    <!--script src="js/file-upload.js"></script-->
+
+    <script src="lib/embed/marked.min.js"></script>
+    <script src="lib/embed/embed.min.js"></script>
+    <link rel="stylesheet" href="lib/embed/embed.min.css" />
+  </head>
+
+  <body onload="init()">
+    <div id="chatPage">
+      <div id="chatContent">
+        <div id="loggedin" style="display: none">
+          <div id="messageInput" style="display: none">
+            <textarea
+              class="inputText"
+              id="messageText"
+              placeholder="Type a message..."></textarea>
+            <a onclick="sendMessage()" title="send">&#x21b5;</a>
+            <a onclick="uploadForm()" title="upload">&#x21E7;</a>
+            <a id="commentLabel" onclick="cancelComment()" title="comment"
+              ><br />&lt;cancel comment&gt;</a
+            >
+          </div>
+
+          <div id="messageInputEd" style="display: none">
+            <textarea
+              class="inputText"
+              id="messageTextEd"
+              placeholder="Type a message..."></textarea>
+            <a id="sendMessageEd" title="send">&#x21b5;</a>
+            <a id="cancelEdit" title="cancel">&#x21BA;</a>
+            <a onclick="uploadForm()" title="upload">&#x21E7;</a>
+            <input type="hidden" id="sendMessageEdId" />
+          </div>
+        </div>
+      </div>
+
+      <div id="popUpload" style="display: none">
+        <a href="#" id="popUploadX">Close</a>
+
+        <div class="upload-div">
+          <h2>Upload a file</h2>
+          <h3>common web formats such as images, videos (mp4), mp3, pdf</h3>
+
+          <div id="listUploads"></div>
+
+          <form
+            id="uploadForm"
+            action="upload/upload.php"
+            method="post"
+            enctype="multipart/form-data">
+            <input type="file" id="filesZ" name="files[]" />
+            <label for="files[]"></label><br />
+            <!--input type="submit" value="Upload"-->
+          </form>
+
+          <div id="uploading">Uploading...</div>
+
+          <div class="progress">
+            <div class="bar"></div>
+            <div class="percent">0%</div>
+          </div>
+          <div id="status"></div>
+        </div>
+      </div>
+
+      <div id="popupTagRoomPreview">
+        <div
+          id="tags-room-title"
+          style="font-weight: bold; padding-top: 30px"></div>
+        <div id="tagMessages" class="row" style="height: 500px"></div>
+      </div>
+    </div>
+    <!-- chat page -->
+  </body>
+</html>

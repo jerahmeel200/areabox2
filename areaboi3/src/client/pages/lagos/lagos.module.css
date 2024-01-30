@@ -1,0 +1,91 @@
+.homeeBody {
+  padding-top: 0.3em;
+  display: grid;
+  height: 100vh;
+  overflow-y: scroll;
+  padding-bottom: 3.2em;
+}
+
+.metroMap {
+  min-height: 15.125rem;
+  margin-bottom: 9px;
+  width: 100%;
+  height: 100%;
+}
+.homeCardFeatured {
+  width: 100%;
+  min-width: 360px;
+  max-width: 768px;
+  background-color: rgba(142, 109, 185, 0.3);
+  padding: 10px;
+}
+.featuredCardContainer {
+  display: flex;
+  justify-content: space-between;
+  /* align-items: center; */
+  position: relative;
+}
+
+.featuredCardLabel {
+  border: 1px solid #1505cc;
+  color: #1505cc;
+  font-family: 'Noto Sans JP Bold', Helvetica;
+  font-weight: bold;
+  font-size: 0.625rem;
+  padding: 0.5px 1.5px;
+  position: absolute;
+  bottom: -20px;
+  right: 0;
+  z-index: 5;
+  background: #ffffff;
+  text-transform: uppercase;
+  margin-right: 6px;
+  margin-bottom: 1px;
+}
+
+.featuredCard {
+  /* flex: 1; */
+  position: relative;
+  border-bottom: 20px solid #0b0061;
+  margin-left: 20px;
+}
+
+.mapInteract {
+  bottom: 7px;
+  right: 0px;
+  z-index: 3;
+  display: flex;
+  justify-content: space-between;
+  margin: 4px;
+  color: white;
+  cursor: pointer;
+  z-index: 999;
+  align-items: center;
+}
+.getDirections {
+  border: 0.5px solid #ffffff;
+  font-size: 0.625rem;
+
+  text-align: center;
+  margin-left: 4px;
+}
+/* .homeCardLabel {
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 14px;
+  background-color: white;
+  font-family: "Roboto Mono", Helvetica;
+} */
+.cardDetails {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.cardDetails span {
+  font-family: 'Roboto Mono', Helvetica;
+  font-weight: 700;
+  font-size: 12px;
+  line-height: 11.87px;
+  margin-top: 5px;
+}

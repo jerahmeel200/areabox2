@@ -1,0 +1,392 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8" class="next-head next-head" />
+    <meta
+      name="viewport"
+      content="initial-scale=1, maximum-scale=1, width=device-width, minimal-ui"
+      class="next-head" />
+    <meta http-equiv="Pragma" content="no-cache" class="next-head" />
+    <style class="next-head">
+
+      	@font-face {
+          	  font-family: ScriberStencil;
+          	  src: url(&quot;static/fonts/Scriber_Bold_Stencil/Scriber_Bold_Stencil.woff&quot;) format(&quot;woff&quot;)/*, url(&quot;path/old-safari.ttf&quot;)  format(&quot;truetype&quot;)*/;
+      	}
+
+      	@import url(https://fonts.googleapis.com/css?family=Varela+Round);
+
+      	html, body {
+      	 height: 100%;
+      	 font: 100%/1.5em &quot;Varela Round&quot;, sans-serif;
+      	 margin:0px;
+      	}
+      	#__next {
+      	  /*background-color:black;*/
+      	  color: #efece5;/* white */
+                background-color: #efece5;/* black;*/
+      	}
+      	#__next &gt; div &gt; div {
+          	  color: black;
+      	}
+
+              .layout-header {
+                display:none;
+                height:0px;
+              }
+
+              body {
+                color: black;/* white */
+                background-color: #efece5;/* black;*/
+      	  margin: 0px auto;
+              }
+
+              a {
+                text-decoration: none;
+                cursor: pointer;
+                word-wrap:break-word;
+                /*font-size:80%;*/
+                color: black;
+              }
+
+
+
+              a .no_link {
+                font-size:100% !important;
+              }
+
+              .header {
+      	  position: fixed;
+      	  top: 0;
+      	  left: 0;
+      	  z-index:9999;
+      	  width: 100% !important;
+      	}
+
+              /* FIXED-NAV-BAR */
+              .fixed-nav-bar {
+                z-index: 9999;
+          	  /* width: 1024px;	*/
+                height: 87px;
+                border-bottom:1px solid #777;
+      	  font: 120%/1.5em &quot;ScriberStencil&quot;, sans-serif;
+      	  margin: 0px auto;
+      	  width: 100% !important;
+              }
+
+              .fixed-footer {
+                position: fixed;
+                bottom: 0;
+                left: 0;
+                z-index: 9999;
+                opacity:1;
+                width: 100%;
+                background-color: black;
+                display: table;
+                border-top:1px solid #fff606;
+              }
+
+              .input-footer-closed {
+                width: 100%;
+      	      background-color: white;
+              }
+
+              /*
+              .modal-overlay {
+                position: absolute;
+                opacity: 0;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 100%;
+              }
+              .display-on {
+                display: block;
+              }
+
+              .display-off {
+                display: none;
+              }
+
+              .ReactModalPortal {
+                position:static
+              }
+              */
+
+
+              .ReactModal__Overlay {
+                position:absolute  !important;
+                top:200px  !important;
+              }
+
+      	.ReactModal__Content &gt; div {
+      	    margin-top: 380px;
+      	}
+
+              .input-div {
+                text-align: center;
+                margin:0 auto;
+                width: 100%;
+                height: 100%;
+                text-size: small;
+                display: table;
+              }
+
+              .input-div td:nth-child(2) {
+                width: 1em;
+              }
+
+              .input-div-hint {
+                text-align: left;
+                margin:0 auto;
+                width: 100%;
+                height: 100%;
+                text-size: small;
+                display: table;
+              }
+
+              #messageText {
+                width: 100%;
+                /*height: 5em;*/
+                vertical-align: middle;
+          	  color: white;
+          	      border: 2px solid silver;
+      	}
+
+      	input, textarea {
+      		    display: inline-table;/* hides browser styles on opera */
+      	    color: black;
+                  border-width: 0;
+                  background-color: white; /* #dd9951*/
+      	}
+
+              input,
+              textarea::-webkit-input-placeholder { /* WebKit browsers */
+
+              }
+              input,
+              textarea:-moz-placeholder { /* Mozilla Firefox 4 to 18 */
+
+                 opacity:  1;
+
+              }
+              input,
+              textarea::-moz-placeholder { /* Mozilla Firefox 19+ */
+
+                 opacity:  1;
+
+              }
+              input,
+              textarea:-ms-input-placeholder { /* Internet Explorer 10+ */
+
+
+              }
+
+              .footer_btn {
+                height: 100%;
+                margin-left: 1em;
+                vertical-align: middle;
+                background-color: transparent;
+                color: #a8a4ff !important; /*blue 0da9ff*/
+          		/*top: -22px;*/
+          		position: relative;
+          		color: white;
+              }
+
+              .mascot-div {
+                z-index: 20;
+         	  position: absolute;
+              }
+              .header-div {
+                position: absolute;
+          	  top: 0px;
+          	  z-index: 10;
+      	  width: 100% !important;
+      	}
+
+
+      @media (hover:none), (hover:on-demand) {
+        /* custom css for &quot;touch targets&quot; */
+        body {
+              width: 100%;
+        }
+        .header-div {
+
+        }
+        .messages {
+      	width 100%;
+      	color: black;
+      	font: 150%/1.5em &quot;ScriberStencil&quot;, sans-serif;
+      	  margin: 0px auto;
+        }
+        .desktop {
+      	display:none;
+        }
+        .no_notif p a {
+          max-width: 140px;
+          text-overflow: ellipsis;
+          display: inline-block;
+          overflow: hidden;
+          height: 20px;
+        }
+      }
+
+      @media (hover:hover) {
+        /* custom css for desktops */
+        body {
+              min-width: 500px;
+      	max-width: 1024px;
+        }
+       .header-div {
+      	min-width: 500px;
+      	max-width: 1024px;
+        }
+        .messages {
+      	width 100%;
+        }
+        .fixed-nav-bar {
+      	min-width: 500px;
+      	max-width: 1024px;
+        }
+        .mobile {
+      	display:none;
+        }
+      }
+
+
+              .main_header {
+                 width:100%;
+                 height:58px;
+      	   background-color: #fff606;
+              }
+              .sub_header {
+                background-color: black;
+                width:100%;
+                height:30px !important;
+                /*margin:0 auto;*/
+                border-bottom:1px solid #777;
+                /*text-align: center;*/
+                vertical-align: middle;
+      	  border-top: 1px inset #777;
+              }
+
+      	.sub_header .notif {
+                padding-left: 130px;
+              }
+
+      	.notif p  {
+      	  position: absolute;
+          	  top: 52px;
+          	  left: 160px
+      	}
+
+      	.no_notif p  {
+      	  position: absolute;
+          	  top: 52px;
+          	  left: 160px
+      	}
+
+
+      	.sub_header_footer {
+                background-color: black;
+                width:100%;
+                height:30px !important;
+                margin:0 auto;
+                border-bottom:1px solid #777;
+                text-align: center;
+                vertical-align: middle;
+      	  border-top: 1px inset #777;
+              }
+
+              .mascot {
+                width: auto;
+                margin: 0px auto;
+              }
+
+              .footer {
+      	  font: 120%/1.5em &quot;ScriberStencil&quot;, sans-serif;
+      	  display:none;
+      	}
+
+
+
+      	  .center-img {
+      		display: block;
+      		margin-left: auto;
+      		margin-right: auto;
+      		width: 100%;
+      		hight: auto;
+      	  }
+
+
+        p {
+          margin: 0 auto;
+          padding: 10px;
+        }
+        .header,.msg {
+            /*display: flex;*/
+        }
+
+        .header {
+            color: white;
+            padding-right: 0;
+        }
+
+        .messages {
+            background-color: #efece5; /* black */
+          /*flex: 1; */
+          margin-top: 1em;
+          /*margin-bottom: 2.5em;*/
+          /*margin-top: 8em;  same as navbar */
+          padding-top: 95px; /* for fixed header */
+        }
+
+
+
+      	.option1 > a {
+      		border: 1px solid silver;
+      		padding: 10px;
+      		color:black;
+      	}
+    </style>
+    <style class="next-head">
+      /*embed.min.css*/
+    </style>
+  </head>
+  <body>
+    <div id="__next">
+      <div data-reactroot="">
+        <header class="layout-header"></header>
+        <div>
+          <header class="header contact">
+            <div class="fixed-nav-bar">
+              <div class="mascot-div">
+                <img class="mascot" src="img/mascot.png" />
+              </div>
+              <div class="header-div">
+                <section class="main_header"></section>
+                <section class="sub_header no_notif">
+                  <p>
+                    <a href="https://areabox-chat.firebaseapp.com/">Areabox</a>
+                  </p>
+                </section>
+              </div>
+            </div>
+          </header>
+          <div class="messages">
+            <section>
+              <center>
+                <p class="option1">
+                  <a href="https://chat.areabox.tv/">Areabox Chat</a>
+                </p>
+              </center>
+            </section>
+          </div>
+          <footer class="footer">
+            <section class="sub_header_footer"><p></p></section>
+          </footer>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

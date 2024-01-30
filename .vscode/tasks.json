@@ -1,0 +1,13 @@
+{
+  "version": "2.0.0",
+  "tasks": [
+    {
+      "label": "Setup Hooks",
+      "type": "shell",
+      "command": "rm -f -r .git/hooks && ln -s $(pwd)/hooks .git/", // Shell command to create a symlink to the hooks folder
+      "runOptions": {
+        "runOn": "folderOpen"
+      }
+    }
+  ]
+}

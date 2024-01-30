@@ -1,0 +1,17 @@
+# Git
+.git/
+
+# Visual Studio Code
+.vscode/*
+!.vscode/settings.json
+!.vscode/tasks.json
+!.vscode/launch.json
+!.vscode/extensions.json
+.history/*
+
+# Node
+**/node_modules
+
+# System files
+.DS_Store
+Thumbs.db

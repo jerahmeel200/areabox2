@@ -1,0 +1,47 @@
+.layout {
+  background: #0a142f;
+  color: white;
+}
+
+.container {
+  margin: 50px 100px;
+}
+
+.phone {
+  color: white;
+  margin-top: 30px;
+}
+.email {
+  color: white;
+  margin-top: 30px;
+  font-size: 12px;
+}
+
+.first_layout {
+  display: flex;
+  flex-direction: row;
+  align-items: baseline;
+  justify-content: space-between;
+}
+
+.second_layout {
+  display: flex;
+  flex-direction: row;
+  color: white;
+  align-items: baseline;
+  justify-content: space-between;
+}
+
+.social {
+  display: flex;
+  justify-content: space-between;
+  width: 200px;
+}
+.social_button {
+  border-radius: 50%;
+  padding: 10px;
+  width: 50px;
+  text-align: center;
+  background-color: #0a142f;
+  border: 1px solid white;
+}

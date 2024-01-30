@@ -1,0 +1,99 @@
+{
+  "hosting": [
+    {
+      "public": "dist/client",
+      "target": "nextapp-prod",
+      "rewrites": [
+        {
+          "source": "**",
+          "function": "nextjs"
+        }
+      ]
+    },
+    {
+      "public": "dist/build",
+      "target": "adminapp-prod",
+      "rewrites": [
+        {
+          "source": "**",
+          "function": "admin"
+        }
+      ]
+    },
+    {
+      "public": "dist/client",
+      "target": "nextapp-sit",
+      "rewrites": [
+        {
+          "source": "**",
+          "function": "nextjs",
+          "headers": [
+            {
+              "key": "Cache-Control",
+              "value": "no-cache"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "public": "dist/build",
+      "target": "adminapp-sit",
+      "rewrites": [
+        {
+          "source": "**",
+          "function": "admin",
+          "headers": [
+            {
+              "key": "Cache-Control",
+              "value": "no-cache"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "public": "dist/client",
+      "target": "nextapp-uat",
+      "rewrites": [
+        {
+          "source": "**",
+          "function": "nextjs",
+          "headers": [
+            {
+              "key": "Cache-Control",
+              "value": "no-cache"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "public": "dist/build",
+      "target": "adminapp-uat",
+      "rewrites": [
+        {
+          "source": "**",
+          "function": "admin",
+          "headers": [
+            {
+              "key": "Cache-Control",
+              "value": "no-cache"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "functions": {
+    "runtime": "nodejs16",
+    "source": ".",
+    "ignore": [
+      ".firebase/**",
+      ".firebaserc",
+      "firebase.json",
+      "**/node_modules/**",
+      "**/public/**"
+    ]
+  }
+}

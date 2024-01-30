@@ -1,0 +1,9 @@
+.africa {
+  /* color: red; */
+  font-family: StolzlMedium;
+}
+
+@font-face {
+  font-family: StolzlMedium;
+  src: url('Stolzl-Medium.ttf');
+}

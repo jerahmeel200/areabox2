@@ -1,0 +1,144 @@
+body {
+  color: white;
+  background-color: black;
+  overflow: hidden;
+}
+a {
+  text-decoration: none;
+  cursor: pointer;
+  word-wrap: break-word;
+  font-size: 80%;
+  color: #ffffaa;
+}
+
+/* Flexbox chat */
+/*@import url(http://fonts.googleapis.com/css?family=Varela+Round);
+
+[class*="fontawesome-"]:before {
+font-family: 'FontAwesome', sans-serif;
+}
+static/fonts/Scriber_Bold_Stencil/Scriber_Bold_Stencil.otf
+*/
+
+html,
+body {
+  height: 100%;
+  font:
+    100%/1.5em 'Varela Round',
+    sans-serif;
+}
+
+p {
+  margin: 0px auto;
+  padding: 0.25em;
+}
+
+blockquote {
+  margin: 0;
+  padding: 0.5em;
+  max-width: 100%;
+}
+
+img {
+  max-width: 100%;
+  max-height: 100%;
+  height: auto;
+}
+
+video {
+  max-width: 100%;
+  max-height: 100%;
+  height: auto;
+}
+
+blockquote img {
+  max-height: 90%;
+  width: auto;
+  margin: 0.15em;
+}
+blockquote video {
+  max-height: 90%;
+  width: auto;
+  margin: 0.15em;
+}
+blockquote .photopopup {
+  max-height: 90%;
+  width: auto;
+  margin: 0.15em;
+}
+blockquote .ejs-embed {
+  max-height: 90%;
+  width: auto;
+  margin: 0.15em;
+}
+
+.date {
+  font-size: small;
+  padding-right: 5px;
+}
+
+/* FROM AREABOI_WEB */
+.webtexts {
+  color: #ffd;
+  font-weight: normal;
+  font-size: 90%;
+}
+div br {
+  display: inline;
+}
+
+.weblogo {
+  -webkit-user-select: none !important;
+  cursor: -webkit-zoom-in !important;
+  /*max-width:33% !important; 
+  max-height:100px !important;*/
+  max-width: 100% !important;
+  overflow: hidden;
+  -moz-border-radius: 5px;
+  -webkit-border-radius: 5px;
+  border-radius: 5px;
+  -khtml-border-radius: 5px;
+  display: block;
+}
+/* embedjs */
+iframe {
+  border-width: 0;
+}
+
+.ejs-video-desc {
+  font-size: small;
+}
+
+.ejs-video-stats {
+  visibility: hidden;
+}
+
+.grey-link {
+  word-break: break-all;
+  visibility: hidden;
+  content: ' ';
+  display: none;
+}
+.card-link {
+  word-break: break-all;
+  max-height: 1.5em;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.card-link :after {
+  content: ' .. ';
+}
+.photopopup {
+  max-height: 10em;
+  overflow: hidden;
+}
+.photopopup :after {
+  content: '<hr>';
+}
+.ejs-embed {
+  max-height: 10em;
+  overflow: hidden !important;
+}
+.ejs-embed :after {
+  content: '<hr>';
+}

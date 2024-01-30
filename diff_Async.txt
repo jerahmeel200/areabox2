@@ -1,0 +1,39 @@
+477a478,484
+>     
+>     const layout = page.room_layout || "";
+>     const default_layout= layout==""
+>     const featured_channel = !default_layout
+> 
+>     if (editing || commenting) no_input = false;
+>     if( featured_channel) no_input= true
+479c486
+<     if (editing) no_input = false;
+---
+>     
+484d490
+<     const layout = page.room_layout || "";
+615c621
+<         <section className="register">
+---
+>         <section id="register" className="register">
+745c751
+<                   {registered &&
+---
+>                   {registered && !readonly &&
+756c762
+<                   {registered &&
+---
+>                   {registered && 
+931c937
+<                   {registered && userName != defaultUserName && (
+---
+>                   {registered && userName != defaultUserName && !readonly && (
+1335c1341
+<       document.getElementById("register_forms").style.display = "block";
+---
+>       document.getElementById("register").style.display = "block";
+1343c1349,1350
+<     document.getElementById("register_forms").style.display = "none";
+---
+>     if( document.getElementById("register") )
+>       document.getElementById("register").style.display = "none";

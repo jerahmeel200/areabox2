@@ -1,0 +1,10 @@
+#!/bin/bash
+
+prettier=$(npx prettier . -c)
+
+if [ $? -ne 0 ]; then
+  echo "Prettier failed. Please fix prettier errors and try again."
+  exit 1
+fi
+
+exit 0

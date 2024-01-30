@@ -1,0 +1,92 @@
+.container {
+  display: flex;
+  /* padding: 50px; */
+  width: 100vw;
+  min-width: 360px;
+  max-width: 768px;
+  padding-top: 50px;
+  height: 100%;
+  margin: 0 auto;
+}
+.contain {
+  margin-top: 20px;
+  /* margin-left: 20px; */
+}
+.left img {
+  object-fit: contain;
+}
+.left {
+  margin-top: 50px;
+}
+.right {
+  color: white;
+  background-color: blue;
+  /* height: 100vh; */
+  width: 100vw;
+  min-width: 200px;
+  max-width: 200px;
+  padding-top: 50px;
+
+  max-width: 700px;
+  padding: 10px 10px 10px 10px;
+  margin-top: 50px;
+}
+.right p {
+  font-weight: 300;
+  font-size: 12px;
+  /* line-height: 16.8px; */
+}
+.accordionTitle {
+  display: flex;
+  flex-direction: row;
+  cursor: pointer;
+  font-weight: 500;
+  /* background-color: #1035d9; */
+  /* border-bottom: 1px dotted black; */
+}
+.terms {
+  color: pink;
+  margin-top: 40px;
+}
+.table {
+  text-decoration: underline;
+  font-weight: 500;
+  font-size: 12px;
+}
+.accordionContent {
+  font-weight: 300;
+  font-size: 12px;
+  flex-wrap: wrap;
+  padding-left: 10px;
+  padding-right: 10px;
+}
+
+.listContainer li {
+  /* margin-right: 10px;
+  padding-right: 70px; */
+  /* padding-left: 10px; */
+  padding-left: 5px;
+  padding-right: 5px;
+  margin-bottom: 5px;
+}
+.listContainer {
+  margin-right: 10px;
+  margin-bottom: 2px;
+  /* color: red; */
+  font-size: 12px;
+  padding-left: 0px;
+  /* left: 0px !important; */
+  /* margin-left: 50px; */
+}
+
+@media screen and (max-width: 600px) {
+  .right {
+    max-width: 300px;
+  }
+}
+
+@media screen and (min-width: 768px) {
+}
+
+@media screen and (min-width: 1280px) {
+}

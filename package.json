@@ -1,0 +1,20 @@
+{
+  "name": "areabox-main",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "https://areaboxer@dev.azure.com/areaboxer/AREABOX/_git/AREABOX",
+  "author": "Alan Vasquez <aovibusiness@gmail.com>",
+  "private": "true",
+  "scripts": {
+    "lint": "eslint .",
+    "prettier": "npx prettier . -c",
+    "prettier:fix": "npx prettier . --write"
+  },
+  "devDependencies": {
+    "eslint": "^8.53.0",
+    "eslint-config-prettier": "^9.0.0",
+    "eslint-plugin-prettier": "^5.0.1",
+    "eslint-plugin-react": "^7.33.2",
+    "prettier": "^3.0.3"
+  }
+}

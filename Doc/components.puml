@@ -1,0 +1,167 @@
+@startuml
+
+package "Areabox" {
+  [areabox_tv/] --> [chat_areabox_tv/]
+}
+
+note top of [areabox_tv]
+  this can be viewed 
+  or converted to image 
+  with plantuml.com 
+  or other UML Viewers
+end note
+
+note bottom of [areabox_tv]
+  Firebase hosting of static html files 
+   for faster load times 
+   and lower downtime
+  - highlights cards and news
+  - deep linking 
+   to propject parts such as Chat 
+  - static output from a CMS
+end note
+
+
+node "Firebase_Hosting_Functions" {
+  ExpressJS --> nextJS 
+  nextJS --> client 
+  client --> [chat_areabox_tv/]
+  [chat_areabox_tv/] --> [ReactJS_app]
+  ExpressJS --> [Server_api]
+}
+
+node "Server_api" {
+  [/login_firebase_custom_token]
+  [/upload_files]
+  [/audio_recording]
+  [/meta_scrapping_ogp]
+  [/mux_streaming]
+} 
+
+note bottom of [ReactJS_app]
+  /next-firebase-redux 
+  has sample basic arquitecture 
+  integration of these toolkits
+  as a React app
+end note
+
+node "ReactJS_app" {
+  [pages/index] --> [get_or_search_posts]
+  [get_or_search_posts] --> [CollectMsgs_latest]
+  [get_or_search_posts] --> [CollectMsgs_beforeLast]
+  [get_or_search_posts] --> [CollectMsgs_withTag]
+  [get_or_search_posts] --> [CollectMsgs_searchWords]
+  [get_or_search_posts] --> [AsyncApp]
+  [AsyncApp] --> [Layout_css]
+  [AsyncApp] --> [Register]
+  [AsyncApp] --> [pages_Rooms_logged_out]
+  [AsyncApp] --> [NewPost]
+  [AsyncApp] --> [Header]
+  [AsyncApp] --> [Posts]
+  [Posts] --> [Post]
+  [AsyncApp] --> [pages/card_fullScreen]
+  [AsyncApp] --> [Footer]
+  [AsyncApp] --> [Emoji]
+  [AsyncApp] --> [Recorder]
+  [AsyncApp] --> [UploadForm]
+}
+
+node "Register" {
+  auto_login_second_time --> firebaseAuth
+  login --> [firebaseAuth_google] 
+  login --> [Cotter]
+  [Cotter] --> [/login_firebase_custom_token]
+  [/login_firebase_custom_token] --> [firebaseAuth_signInWithCustomToken] 
+}
+
+node "NewPost" {
+  [rooms_list] 
+  [get_num_msgs_unread]
+  [input_text] --> [sendMessageText]
+  [sendMessageText] --> editing
+  [sendMessageText] --> handle_tags
+  [sendMessageText] --> [handle_links]
+  [sendMessageText] --> Firebase_database
+  [sendMessageText] --> preview_post
+  [sendMessageText] --> updatePost
+  [updatePost] --> AsyncApp
+  [handle_links] --> TODO01
+  [preview_post] --> TODO02
+}
+
+node "handle_links" {
+   [/meta_scrapping_ogp]
+}
+
+node "pages/card_fullScreen" {
+  Shows_Message --> Next_Message
+  Changes_For_Live --> ToDo2
+}
+
+node "pages/metro" {
+  [list_metro_channels] 
+  [show_channel_tag_cloud] --> TODO1
+  Finish_coding --> Implemetation_Diagram
+}
+
+database "Firebase_database" {
+  folder "chat" {
+    [room_key] --> [message]
+  }
+  folder "tags" {
+    tag --> [tag_record] 
+    [tag_record] --> [room_key]
+    [tag_record] --> [msg_priority]
+  }
+  frame "tags_sorted" {
+    tag --> [tag_sorted] 
+    count --> number
+  }
+  folder "users" {
+    user_id --> [user_record] 
+    [user_record] --> [userName]
+    [user_record] --> [profile]
+    [user_record] --> [rooms_known]
+    [rooms_known] --> [room_key] 
+    [rooms_known] --> priority firebase_prop_when_last_read
+  }
+  frame "profile" {
+    [avatar]
+    [nickname]
+  }
+  frame "rooms" {
+    room_key --> [room]
+  }
+  frame "room" {
+    [key] 
+    [title] 
+    [pinned] --> key_of_msg_pinned
+  }
+  frame "message" {
+    [key]  
+    [room_key]
+    [text]
+    [link]
+    [cache_version]
+    [pinned]
+    [tags_]
+  }
+  folder "words" {
+    word --> [word_record] 
+  }
+  frame "word_record" {
+    msg_key --> 1
+  }
+}
+
+note bottom of [msg_priority]
+   timestamp of msg
+end note
+
+
+note bottom of [word_record]
+  an index of messages
+   where the word occurs
+end note
+
+@enduml

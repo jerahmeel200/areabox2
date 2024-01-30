@@ -1,0 +1,29 @@
+{
+  "projects": {
+    "default": "areabox-chat"
+  },
+  "targets": {
+    "areabox-chat": {
+      "hosting": {
+        "nextapp-prod": [
+          "areabox-chat-prod"
+        ],
+        "adminapp-prod": [
+          "areabox-admin-prod"
+        ],
+        "nextapp-sit": [
+          "areabox-chat-sit"
+        ],
+        "adminapp-sit": [
+          "areabox-admin-sit"
+        ],
+        "nextapp-uat": [
+          "areabox-chat-uat"
+        ],
+        "adminapp-uat": [
+          "areabox-admin-uat"
+        ]
+      }
+    }
+  }
+}

@@ -1,0 +1,7 @@
+In the Google Cloud Platform Console (not firebase console!), select Cloud Functions from the left menu.
+Select a function by clicking on its name in the functions list.
+Click the Edit icon in the top menu.
+Select a memory allocation from the drop-down menu labeled Memory allocated.
+Click More to display the advanced options, and enter a number of seconds in the Timeout text box.
+Click Save to update the function.
+Set to 1G 60s 25 instances

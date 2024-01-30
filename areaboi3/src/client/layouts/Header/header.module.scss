@@ -1,0 +1,16 @@
+.search {
+  margin: 20px 80px;
+}
+.menu {
+  float: right;
+}
+
+@media (max-width: 767px) {
+  .header {
+    padding: 0 10px;
+  }
+
+  .menu {
+    display: none;
+  }
+}

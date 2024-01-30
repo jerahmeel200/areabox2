@@ -1,0 +1,26 @@
+4c4
+< import PostsCinema from "./posts/PostsCinema";
+---
+> import PostsCinema from "./posts/cinema/Posts";
+5a6
+> import PostsRadio from "./posts/radio/Posts";
+65a67,85
+>           posts={posts}
+>           page={page}
+>           commentFn={commentFn}
+>           userLogedIn={userLogedIn}
+>           registered={registered}
+>           nocache="1.2"
+>           editFn={editFn}
+>           userMetadata={userMetadata}
+>           profileFn={profileFn}
+>           gChatRef={gChatRef}
+>           readonly={readonly}
+>           pinFn={pinFn}
+>           layout={layout}
+>         />
+>       );
+>     }
+>     else if (layout == "radio") {
+>       return (
+>         <PostsRadio

@@ -1,0 +1,26 @@
+trigger:
+  - 'prod'
+
+jobs:
+  - job: BuildAndDeploy
+    pool:
+      vmImage: 'ubuntu-latest'
+    steps:
+      - checkout: self
+
+      - task: NodeTool@0
+        inputs:
+          versionSpec: '16.20.2'
+        displayName: 'Install Node.js'
+
+      - script: |
+          cd areaboi3/
+          yarn install --silent
+          yarn run build:prod
+        displayName: 'Build'
+
+      - script: |
+          cd areaboi3/
+          npx firebase use default --token $(FIREBASE_TOKEN)
+          npx firebase deploy --only hosting:nextapp-prod,hosting:adminapp-prod --token $(FIREBASE_TOKEN)
+        displayName: 'Deploy to Firebase'

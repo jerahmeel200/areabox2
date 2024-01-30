@@ -1,0 +1,17 @@
+{
+  "emulators": {
+    "functions": {
+      "port": 3006,
+      "runtime": "nodejs16"
+    },
+    "firestore": {
+      "port": 3007
+    },
+    "ui": {
+      "enabled": true
+    }
+  },
+  "functions": {
+    "runtime": "nodejs16"
+  }
+}

@@ -1,0 +1,45 @@
+import React from 'react';
+
+function _04ASvg({ width, height, fill, className, style, onClick }) {
+  const onclick = onClick || (() => {});
+  return (
+    <svg
+      version="1.1"
+      id="Layer_1"
+      xmlns="http://www.w3.org/2000/svg"
+      xmlns:xlink="http://www.w3.org/1999/xlink"
+      x="0px"
+      y="0px"
+      width={width || '55px'}
+      height={height || '69px'}
+      fill={fill || ''}
+      className={className || ''}
+      style={style || {}}
+      onClick={onclick}
+      viewBox="0 0 55 69"
+      enableBackground="new 0 0 55 69"
+      xml:space="preserve">
+      {' '}
+      <image
+        id="image0"
+        width="55"
+        height="69"
+        x="0"
+        y="0"
+        xlink:href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADcAAABFCAMAAADZ746+AAAABGdBTUEAALGPC/xhBQAAACBjSFJN
+AAB6JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAAAS1BMVEX///8AAADxoSDxoSDP
+nnbPnnbPnnbPnnbPnnbxoSDRnnHPnnbRnnLQoHkNCgcAAADAwMD////SpH9ISEhgYGBoZmQMCQcI
+BgVNOyzjxML5AAAACXRSTlMAAAAgUEAgLhD5MlbJAAAAAWJLR0QAiAUdSAAAAAd0SU1FB+MDGRQh
+AKEFvwYAAAC2SURBVEjH7dZND8IgDIBh5rdjDFFk/v9fKqY92KVAORiN6Xsb9AnZdsEYYwbo3G4D
+kwZSx7stJHA4iQ4XR9tqxEl1Ejc13URdc36dug7nKsBxbvb+EkK4csCTva+7W4zRFVzeu5fe75Ut
+uNxs1f2fk6euw81cAue5PuhSSgsxS14RfpfKWT/lHu8V3Q5q/2+Lk/R+JnADd69Tx7s9xALcY13t
+WDqirsMdIARHeBI4euyJ21NXdE+0CHq42A2SpgAAACV0RVh0ZGF0ZTpjcmVhdGUAMjAxOS0wMy0y
+NVQyMDozMzowMCswMzowMFgvYDYAAAAldEVYdGRhdGU6bW9kaWZ5ADIwMTktMDMtMjVUMjA6MzM6
+MDArMDM6MDApctiKAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAABJRU5E
+rkJggg=="
+      />
+    </svg>
+  );
+}
+
+export default _04ASvg;

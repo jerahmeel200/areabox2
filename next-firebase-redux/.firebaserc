@@ -1,0 +1,8 @@
+{
+  "projects": {
+    "areabox-staging": "areabox-chat-next9",
+    "next-fb-redux-basics": "areabox-chat-next9",
+    "tests": "areabox-chat-next9",
+    "sta": "areabox-chat-next9"
+  }
+}

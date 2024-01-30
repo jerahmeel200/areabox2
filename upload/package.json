@@ -1,0 +1,19 @@
+{
+  "name": "areabox-upload",
+  "version": "1.0.0",
+  "license": "MIT",
+  "scripts": {
+    "install": "yarn build",
+    "serve": "firebase serve",
+    "deploy": "firebase deploy",
+    "build": "cd \"functions\" && yarn",
+    "start": "cd \"functions\" && yarn start",
+    "logs": "cd \"functions\" && yarn logs",
+    "shell": "cd \"functions\" && yarn shell"
+  },
+  "dependencies": {
+    "atob": "^2.1.2",
+    "firebase-functions": "^3.3.0",
+    "firebase-tools": "^5.0.0"
+  }
+}
