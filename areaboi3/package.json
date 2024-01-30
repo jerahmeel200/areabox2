@@ -22,6 +22,7 @@
     "nextapp:hosting": "yarn predeploy && NODE_ENV=production yarn firebase deploy --only hosting:nextapp",
     "admin:function": "cd Admin/functions && firebase --debug deploy --only functions:admin && cd ../..",
     "predeploy": "rimraf dist/ && yarn build",
+    "next": "next build --no-lint",
     "deploy": "cross-env NODE_ENV=production yarn build && firebase deploy --only hosting"
   },
   "engine": "16",
