@@ -511,7 +511,7 @@ export default function Wallet({
                     </span>
                   </>
                 )}
-                {option?.spec === 'kuda-sendMoney' && (
+                {/* {option?.spec === 'kuda-sendMoney' && (
                   <SendMoneyKuda
                     type={option?.gen}
                     reset={reset}
@@ -521,7 +521,7 @@ export default function Wallet({
                     wallet={wallet}
                     userDet={viewUser}
                   />
-                )}
+                )} */}
                 {option?.spec === 'cusd-sendMoney' && (
                   <SendMoneyCelo
                     type={option?.gen}

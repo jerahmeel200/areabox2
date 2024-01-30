@@ -726,7 +726,7 @@ export function OnrampUSDC({ wallet, kudaBalance, viewUser }) {
                   </span>
                 </div>
               </div>
-              <PhoneConfirm userDet={viewUser} />
+              {/* <PhoneConfirm userDet={viewUser} /> */}
             </>
           )}
 
